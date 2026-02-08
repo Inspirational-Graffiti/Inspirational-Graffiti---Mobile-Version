@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <script>
+  const ua = navigator.userAgent;
+
+  const isPhone =
+    (/iPhone/i.test(ua)) ||
+    (/Android/i.test(ua) && /Mobile/i.test(ua));
+
+  if (!isPhone) {
+    window.location.href = "https://inspirational-graffiti.github.io/Inspirational-Graffiti/";
+  }
+</script>
+
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inspirational Graffiti — Red Inferno Edition</title>
+<title>Inspirational Graffiti — Mobile Edition</title>
 
 <style>
 :root {
@@ -564,7 +578,7 @@ body {
 </section>
 
 <div class="footer fade-up">
-  Inspirational Graffiti — Red Inferno Edition
+  Inspirational Graffiti • Supporting the growth of Birmingham's identity
 </div>
 
 </div>
@@ -739,3 +753,4 @@ items.forEach(el => observer.observe(el));
 
 </body>
 </html>
+
